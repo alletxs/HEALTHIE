@@ -21,13 +21,7 @@ app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY', secrets.token_hex(16))
 
 # Allow requests from our frontend (running on a different port with Live Server)
-CORS(app, supports_credentials=True, origins=[
-    "http://127.0.0.1:5500",
-    "http://localhost:5500",
-    "http://127.0.0.1:5501",
-    "http://localhost:5501",
-    "null"   # for when files are opened directly
-])
+CORS(app, supports_credentials=True, origins="*", allow_headers=["Content-Type"])
 
 # ── DATABASE SETUP ────────────────────────────
 # This is the path to our SQLite database file
@@ -196,4 +190,4 @@ def ping():
 if __name__ == '__main__':
     init_db()        # create tables if they don't exist
     print("🚀 Starting Healthie backend on http://localhost:5000")
-    app.run(debug=True, port=5000)python backend/app.py 2>&1
+    app.run(debug=True, port=5500)python backend/app.py 2>&1
