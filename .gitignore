@@ -1,0 +1,23 @@
+# .gitignore
+# This file tells Git what NOT to upload to GitHub
+
+# Secret keys — NEVER upload this
+.env
+
+# Python virtual environment folder
+venv/
+__pycache__/
+*.pyc
+
+# Database file (will be recreated automatically)
+*.db
+*.sqlite
+
+# VS Code settings
+.vscode/
+
+# Mac system files
+.DS_Store
+
+# Node modules (if you ever add npm)
+node_modules/
