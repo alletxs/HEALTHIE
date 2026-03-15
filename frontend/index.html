@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthie — AI Nutrition Tracker</title>
+
+    <!-- Google Fonts: Inter for body, Playfair Display for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+
+    <!-- Remix Icon pack — free icon library -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Our main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- =============================================
+         ANIMATED BACKGROUND BLOBS
+         These are the soft glowing circles behind
+         the hero section
+    ============================================= -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- =============================================
+         NAVBAR
+         Fixed to the top of the page
+    ============================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <!-- Logo on the left -->
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🥗</span>
+                <span class="logo-text">Healthie</span>
+            </a>
+
+            <!-- Navigation links in the center -->
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How it works</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <!-- Sign in button on the right -->
+            <div class="nav-actions">
+                <a href="dashboard.html" class="btn btn-ghost">Sign In</a>
+                <a href="dashboard.html" class="btn btn-primary">Get Started Free</a>
+            </div>
+
+            <!-- Mobile hamburger button -->
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <i class="ri-menu-line"></i>
+            </button>
+
+        </div>
+
+        <!-- Mobile menu (hidden by default) -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="dashboard.html">Sign In</a>
+            <a href="dashboard.html" class="btn btn-primary">Get Started Free</a>
+        </div>
+    </nav>
+
+    <!-- =============================================
+         HERO SECTION
+         The big attention-grabbing top section
+    ============================================= -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+
+            <!-- Small badge above the headline -->
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                AI-Powered Nutrition Intelligence
+            </div>
+
+            <!-- Main headline — two lines -->
+            <h1 class="hero-title">
+                Know exactly what
+                <em>you're eating.</em>
+            </h1>
+
+            <!-- Supporting text -->
+            <p class="hero-subtitle">
+                Snap a photo of any food. Healthie's AI instantly identifies it,
+                estimates all nutrients, explains the benefits and risks, and
+                suggests healthier alternatives — all in seconds.
+            </p>
+
+            <!-- Call-to-action buttons -->
+            <div class="hero-buttons">
+                <a href="dashboard.html" class="btn btn-primary btn-large">
+                    <i class="ri-camera-line"></i>
+                    Start Tracking Free
+                </a>
+                <a href="#how-it-works" class="btn btn-outline btn-large">
+                    See how it works
+                    <i class="ri-arrow-down-line"></i>
+                </a>
+            </div>
+
+            <!-- Small trust note below buttons -->
+            <p class="hero-note">
+                <i class="ri-shield-check-line"></i>
+                No credit card required · Free forever plan · 1500 AI scans/day
+            </p>
+
+        </div>
+
+        <!-- Scroll indicator arrow -->
+        <div class="scroll-indicator">
+            <i class="ri-arrow-down-s-line"></i>
+        </div>
+    </section>
+
+    <!-- =============================================
+         STATS STRIP
+         Four quick numbers to build trust
+    ============================================= -->
+    <section class="stats-strip">
+        <div class="stats-container">
+
+            <div class="stat-item">
+                <div class="stat-icon"><i class="ri-brain-line"></i></div>
+                <div class="stat-text">
+                    <span class="stat-number">AI</span>
+                    <span class="stat-label">Powered Scanner</span>
+                </div>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="stat-item">
+                <div class="stat-icon"><i class="ri-bar-chart-line"></i></div>
+                <div class="stat-text">
+                    <span class="stat-number">7+</span>
+                    <span class="stat-label">Nutrients Tracked</span>
+                </div>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="stat-item">
+                <div class="stat-icon"><i class="ri-time-line"></i></div>
+                <div class="stat-text">
+                    <span class="stat-number">Auto</span>
+                    <span class="stat-label">Meal Timing</span>
+                </div>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="stat-item">
+                <div class="stat-icon"><i class="ri-heart-line"></i></div>
+                <div class="stat-text">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Free to Use</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =============================================
+         FEATURES SECTION
+         Four feature cards in a grid
+    ============================================= -->
+    <section class="features" id="features">
+        <div class="section-container">
+
+            <!-- Section heading -->
+            <div class="section-header">
+                <span class="section-tag">Features</span>
+                <h2 class="section-title">Everything you need to eat better</h2>
+                <p class="section-subtitle">
+                    Healthie combines AI vision, nutrition science, and
+                    personal health tracking in one clean interface.
+                </p>
+            </div>
+
+            <!-- Feature cards grid -->
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap green">
+                        <i class="ri-camera-line"></i>
+                    </div>
+                    <h3 class="feature-title">Photo Food Scanner</h3>
+                    <p class="feature-desc">
+                        Take a photo of any meal, packaged food, or restaurant dish.
+                        Gemini AI reads and identifies every ingredient automatically.
+                    </p>
+                    <span class="feature-tag">AI Vision</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap blue">
+                        <i class="ri-microscope-line"></i>
+                    </div>
+                    <h3 class="feature-title">Detailed Nutrition Breakdown</h3>
+                    <p class="feature-desc">
+                        Get calories, carbohydrates, protein, fats, fiber, sugar,
+                        and sodium — instantly estimated from your photo.
+                    </p>
+                    <span class="feature-tag">7 Nutrients</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap purple">
+                        <i class="ri-lightbulb-line"></i>
+                    </div>
+                    <h3 class="feature-title">Plain-language Explanations</h3>
+                    <p class="feature-desc">
+                        AI explains what's good and what's risky about your food
+                        in simple everyday language — no medical jargon.
+                    </p>
+                    <span class="feature-tag">AI Insights</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap orange">
+                        <i class="ri-bar-chart-2-line"></i>
+                    </div>
+                    <h3 class="feature-title">History & Analytics Dashboard</h3>
+                    <p class="feature-desc">
+                        View your full eating history. Charts show your daily
+                        calorie intake, macro trends, and meal patterns over time.
+                    </p>
+                    <span class="feature-tag">Charts</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap teal">
+                        <i class="ri-swap-line"></i>
+                    </div>
+                    <h3 class="feature-title">Healthier Alternatives</h3>
+                    <p class="feature-desc">
+                        After every scan, AI suggests a healthier swap or
+                        portion adjustment tailored to your specific food.
+                    </p>
+                    <span class="feature-tag">Smart Tips</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrap red">
+                        <i class="ri-heart-pulse-line"></i>
+                    </div>
+                    <h3 class="feature-title">Medical Data Tab</h3>
+                    <p class="feature-desc">
+                        Optionally log blood sugar, cholesterol, and blood pressure.
+                        AI connects your diet to your health metrics.
+                    </p>
+                    <span class="feature-tag">Optional</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         HOW IT WORKS SECTION
+         Three numbered steps
+    ============================================= -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+
+            <div class="section-header">
+                <span class="section-tag">Process</span>
+                <h2 class="section-title">Three steps to eating smarter</h2>
+                <p class="section-subtitle">No manual data entry. No calorie counting by hand.</p>
+            </div>
+
+            <div class="steps-grid">
+
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon"><i class="ri-camera-3-line"></i></div>
+                    <h3 class="step-title">Upload a food photo</h3>
+                    <p class="step-desc">
+                        Take a photo of your meal or food label and upload it
+                        directly from your phone or computer. Takes under 5 seconds.
+                    </p>
+                </div>
+
+                <!-- Arrow between steps (hidden on mobile) -->
+                <div class="step-arrow"><i class="ri-arrow-right-line"></i></div>
+
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon"><i class="ri-brain-2-line"></i></div>
+                    <h3 class="step-title">AI analyses the food</h3>
+                    <p class="step-desc">
+                        Gemini AI identifies the food, estimates all nutrients,
+                        and generates a plain-language health explanation in seconds.
+                    </p>
+                </div>
+
+                <div class="step-arrow"><i class="ri-arrow-right-line"></i></div>
+
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon"><i class="ri-dashboard-line"></i></div>
+                    <h3 class="step-title">Track your patterns</h3>
+                    <p class="step-desc">
+                        Every meal is saved to your personal dashboard with
+                        charts and summaries — your full food history at a glance.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         CTA BANNER
+         Final push to sign up
+    ============================================= -->
+    <section class="cta-banner" id="about">
+        <div class="cta-container">
+            <div class="cta-glow"></div>
+            <h2 class="cta-title">Ready to understand your food?</h2>
+            <p class="cta-subtitle">
+                Join Healthie today. It's completely free — no subscriptions, no hidden fees.
+            </p>
+            <a href="dashboard.html" class="btn btn-primary btn-large btn-white">
+                <i class="ri-camera-line"></i>
+                Start Tracking Free
+            </a>
+        </div>
+    </section>
+
+    <!-- =============================================
+         FOOTER
+    ============================================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span class="logo-icon">🥗</span>
+                <span class="logo-text">Healthie</span>
+            </div>
+            <p class="footer-note">
+                Built with Google Gemini AI · For personal tracking only · Not a medical device
+            </p>
+            <p class="footer-copy">© 2025 Healthie · Student Capstone Project</p>
+        </div>
+    </footer>
+
+    <!-- Our JavaScript file -->
+     <!-- =============================================
+         AUTH MODAL
+         Slides in when Sign In / Get Started is clicked
+    ============================================= -->
+    <div class="modal-overlay hidden" id="auth-modal">
+        <div class="modal-card" id="auth-card">
+
+            <!-- Close button top right -->
+            <button class="modal-close-btn" id="modal-close-btn">
+                <i class="ri-close-line"></i>
+            </button>
+
+            <!-- Logo at top of modal -->
+            <div class="modal-logo">
+                <span>✦</span>
+                <span class="logo-text">Healthie</span>
+            </div>
+
+            <!-- Tab switcher: Login / Sign Up -->
+            <div class="auth-tabs">
+                <button class="auth-tab active" id="tab-login" onclick="switchAuthTab('login')">
+                    Sign In
+                </button>
+                <button class="auth-tab" id="tab-signup" onclick="switchAuthTab('signup')">
+                    Create Account
+                </button>
+            </div>
+
+            <!-- Form title (changes based on tab) -->
+            <h2 class="modal-title" id="modal-title">Welcome back</h2>
+            <p class="modal-subtitle" id="modal-subtitle">Sign in to your Healthie account</p>
+
+            <!-- Input fields -->
+            <div class="form-group">
+                <label class="form-label" for="auth-username">Username</label>
+                <div class="input-wrap">
+                    <i class="ri-user-line input-icon"></i>
+                    <input
+                        type="text"
+                        id="auth-username"
+                        class="form-input"
+                        placeholder="your username"
+                        autocomplete="off"
+                    />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="auth-password">Password</label>
+                <div class="input-wrap">
+                    <i class="ri-lock-line input-icon"></i>
+                    <input
+                        type="password"
+                        id="auth-password"
+                        class="form-input"
+                        placeholder="••••••••"
+                    />
+                    <!-- Toggle password visibility -->
+                    <button class="input-eye" id="toggle-password" type="button">
+                        <i class="ri-eye-line" id="eye-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Error / success message -->
+            <div class="auth-message hidden" id="auth-message"></div>
+
+            <!-- Submit button -->
+            <button class="btn btn-primary full-width" id="auth-submit-btn">
+                Sign In →
+            </button>
+
+            <!-- Switch mode hint -->
+            <p class="auth-switch">
+                <span id="auth-switch-text">Don't have an account?</span>
+                <button class="auth-switch-btn" id="auth-switch-btn" onclick="switchAuthTab('signup')">
+                    Create one free
+                </button>
+            </p>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+
+</body>
+</html>
