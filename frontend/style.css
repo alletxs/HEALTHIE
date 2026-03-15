@@ -787,3 +787,220 @@ a {
     .cta-container { padding: var(--space-10) var(--space-6); }
     .stats-container { gap: var(--space-5); }
 }
+/* ==============================================
+   AUTH MODAL STYLES
+   ============================================== */
+
+/* Dark overlay behind the modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-5);
+    /* Fade in animation */
+    animation: fadeIn 0.25s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* The white/glass card in the center */
+.modal-card {
+    background: #0f1a2e;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-xl);
+    padding: var(--space-10) var(--space-8);
+    width: 100%;
+    max-width: 440px;
+    position: relative;
+    /* Slide up animation */
+    animation: slideUp 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px) scale(0.95); }
+    to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+
+/* X close button top right */
+.modal-close-btn {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-400);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.modal-close-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--white);
+}
+
+/* Logo at the top of the modal */
+.modal-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+    font-size: 1.3rem;
+    color: var(--green-400);
+    font-weight: 700;
+}
+
+/* Login / Sign Up tab switcher */
+.auth-tabs {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-full);
+    padding: 4px;
+    margin-bottom: var(--space-6);
+    gap: 4px;
+}
+.auth-tab {
+    flex: 1;
+    padding: 9px;
+    border: none;
+    background: transparent;
+    border-radius: var(--radius-full);
+    color: var(--gray-400);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.auth-tab.active {
+    background: var(--green-600);
+    color: var(--white);
+    font-weight: 600;
+    box-shadow: 0 2px 12px rgba(34, 197, 94, 0.3);
+}
+
+/* Modal heading */
+.modal-title {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    color: var(--white);
+    margin-bottom: var(--space-1);
+}
+.modal-subtitle {
+    font-size: 0.88rem;
+    color: var(--gray-500);
+    margin-bottom: var(--space-6);
+}
+
+/* Form fields */
+.form-group {
+    margin-bottom: var(--space-4);
+}
+.form-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gray-400);
+    margin-bottom: var(--space-2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Input wrapper — holds icon + input + eye button */
+.input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--gray-500);
+    font-size: 1rem;
+    pointer-events: none;
+}
+.form-input {
+    width: 100%;
+    padding: 13px 16px 13px 40px;   /* left padding makes room for icon */
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+}
+.form-input::placeholder { color: var(--gray-600); }
+.form-input:focus {
+    border-color: var(--green-500);
+    background: rgba(34, 197, 94, 0.06);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+
+/* Eye icon for password toggle */
+.input-eye {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--gray-500);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s;
+}
+.input-eye:hover { color: var(--gray-300); }
+
+/* Error / success message box */
+.auth-message {
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    margin-bottom: var(--space-4);
+    font-weight: 500;
+}
+.auth-message.error {
+    background: rgba(248, 113, 113, 0.12);
+    border: 1px solid rgba(248, 113, 113, 0.25);
+    color: var(--red-400);
+}
+.auth-message.success {
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    color: var(--green-400);
+}
+
+/* Full width button */
+.full-width { width: 100%; justify-content: center; padding: 14px; }
+
+/* Switch mode hint at bottom */
+.auth-switch {
+    text-align: center;
+    margin-top: var(--space-5);
+    font-size: 0.85rem;
+    color: var(--gray-500);
+}
+.auth-switch-btn {
+    background: none;
+    border: none;
+    color: var(--green-400);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 4px;
+    transition: color 0.2s;
+}
+.auth-switch-btn:hover { color: var(--green-300); }

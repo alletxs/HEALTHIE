@@ -196,4 +196,4 @@ def ping():
 if __name__ == '__main__':
     init_db()        # create tables if they don't exist
     print("🚀 Starting Healthie backend on http://localhost:5000")
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5000)python backend/app.py 2>&1
